@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  /** TIPS: 
+1. The carousel shouldn't be in any other div, like for example div with class container. 
+2. You can align image position in classes bg1, bg2, bg3 using css background-position.
+*/
+
+/* Carousel 100% Fullscreen */
+html, body {
+height:100%;
+margin:0;
+padding:0;
+font-size: 15px;
+background: white;
+font-family: 'font-family: 'Mark', sans-serif';
+
+}
+.carousel, .item, .active {
+height:100%;
+}
+.carousel-inner {
+height:100%;
+}
+.carousel {
+margin-bottom: 60px;
+}
+.carousel-caption {
+z-index: 10;
+}
+.carousel .item {
+background-color: #777;
+}
+.carousel .carousel-inner .bg {
+background-repeat:no-repeat;
+background-size:cover;
+}
+.carousel .carousel-inner .bg1 {
+  background-image:url(carosel-watch.jpeg);
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carousel .carousel-inner .bg2 {
+background-image:url(button-red.jpeg);
+background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/woman-camera.jpg');
+background-position: center bottom;
+}
+
+.hero-image {
+  background-image: url(../img/home-background.png);
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.navbar-brand {
+    font-size: 25px;
+    color: #9AC553 !important;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    width: 130px;
+    height: 35px;
+    margin-top: -7px;
+}
+
+.wear {
+    color: black;
+}
+
+.navbar-default {
+    border: 0;
+    background: white;
+}
+
+.navbar-default .navbar-collapse {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #9AC553; /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: black; /*Change active text color here*/
+}
+
+#home {
+  background-image: url(../img/home-background.png);
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#home img {
+    margin-top: 50px;
+    width: 80%;
+    padding: 20px;
+}
+
+/*#home h1 {
+    font-weight: bold;
+    color:#9AC553;
+    text-align: center;
+    margin-top: 185px;
+    font-size: 60px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}*/
+
+#home p {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+#home .home-right h1 {
+    margin-top: 170px;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#home .home-right p {
+    color: black;
+    font-size: 18px;
+}
+
+#home .home-right {
+    margin-top: 120px;
+}
+
+#home .home-left h1 {
+    margin-top: 170px;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#home .home-left p {
+    color: black;
+    font-size: 18px;
+}
+
+#home .home-left {
+    margin-top: 120px;
+}
+
+#quote {
+    padding-top: 0px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    background: white;
+/*    font-family: 'Varela Round';*/
+}
+
+#quote p:nth-child(1){
+    font-family: cursive;
+    font-size: 35px;
+    color: black;
+}
+
+#quote p:nth-child(2){
+    margin-top:20px;
+    font-size: 20px;
+    color: #9AC553;
+}
+
+#products {
+    margin-bottom:50px;
+}
+
+#products p {
+    margin-top:30px;
+    border-style:solid;
+    border-radius:20px;
+    text-align:bold;
+    width:100%;
+    text-align:center;
+    padding:5px;
+    height:40px;
+}
+
+#products p:hover {
+    cursor:pointer;
+}
+
+#about-me {
+    margin-top:80px;
+    background: #B5E37A;
+}
+
+#about-me .about-me-pic {
+    margin-bottom:150px;;
+}
+
+#about-me .about-me-bio {
+    margin-top: 130px;
+    color: black;
+    margin-bottom: 100px;
+}
+
+#about-me .about-me-bio h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+#about-me .about-me-bio p {
+    font-size: 18px;
+}
+
+#about-me img {
+    border: 4px solid black;
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 80%;
+    border-radius: 100%;
+}
+
+#contact {
+    color: black;
+    margin-top:40px;
+    background-image: url(../img/home-background.jpg);
+    padding: 30px;
+}
+
+#contact h1{
+    font-size: 50px;
+    text-align:center;
+    margin-bottom: 40px;
+}
+
+#info-bar {
+    margin-top:20px;
+    padding:20px;
+    background-color: black;
+}
+
+#info-bar h4 {
+    margin-bottom: 22px;
+    color: white;
+}
+
+#info-bar p {
+    color: white;
+}
+</style>
+<!-- TIPS: 
+1. The carousel shouldn't be in any other div, like for example div with class container. 
+2. You can align image position in classes bg1, bg2, bg3 using css background-position.
+http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
+-->
+<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="img/moviwear.png" alt="nav-logo"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=#home>Home</a></li>
+                        <li><a href=#about-me>About</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=#>Products<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#products">NurtureWatch</a></li>
+                                <li><a href="#products">LittleGuardian</a></li>
+                            </ul></li>
+                        <li><a href=#contact>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!-- Carousel 100% Fullscreen -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item bg bg1 active">
+        <div class="container">
+          <div class="carousel-caption">
+<!--             <h1>Nurture Watch</h1>
+            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p> -->
+<!--             <p><a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a></p> -->
+          </div>
+        </div>
+      </div>
+      <div class="item bg bg2">
+        <div class="container">
+          <div class="carousel-caption">
+<!--             <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>
+  <!-- /end Carousel 100% Fullscreen -->
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+<section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h1>Contact Us</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label>Name: </label>
+                                    <input class="form-control" type="text" name="" value="" placeholder="Enter Name" style="width:500px;">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email: </label>
+                                    <input class="form-control" type="text" name="" value="" placeholder="Enter Email" style="width:500px;">
+                                </div>
+                                <div class="form-group">
+                                    <label>Message: </label>
+                                    <textarea class="form-control" name="" value="" placeholder="Enter Message" style="width:500px;"></textarea>
+                                </div>
+                                <button class="btn btn-default" style="font-weight:bold;">Submit</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="info-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <h4>INFORMATION</h4>
+                        <p>FAQ's</p>
+                        <p>About Our Company</p>
+                        <p>Contact Us</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h4>PRODUCTS</h4>
+                        <p><a style="text-decoration:none;color:white;" href="http://www.nurturewatch.com">NurtureWatch</a></p>
+                        <p>LittleGuardian</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h4>OUR APPS</h4>
+                        <p>...</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h4>SOCIAL MEDIA</h4>
+                        <p><a style="text-decoration:none;color:white;" href="http://www.facebook.com/moviwear">Facebook</a></p>
+                        <p><a style="text-decoration:none;color:white;" href="http://www.instagram.com/moviwear">Instagram</a></p>
+                        <p><a style="text-decoration:none;color:white;" href="https://www.linkedin.com/company/monkey-jabber/">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p style="color:black; margin-left: 30px; margin-top: 20px; margin-bottom: 20px;">Copyright &copy; 2019 MoviWear</p>
+        </footer>
+        
+
+</body>
+</html>
+
