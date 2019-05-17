@@ -249,13 +249,13 @@ background-position: center bottom;
 
 #contact {
     color: black;
-    margin-top:40px;
+    margin-top:30px;
+    margin-bottom:30px;
     background-image: url(../img/home-background.jpg);
-    padding: 30px;
 }
 
 #contact h1{
-    font-size: 50px;
+    color:#9AC553;
     text-align:center;
     margin-bottom: 40px;
 }
@@ -274,12 +274,105 @@ background-position: center bottom;
 #info-bar p {
     color: white;
 }
+    
+    
+.red-info-button {
+    font-family: sans-serif;
+    font-weight:600;
+  border-radius: 4px;
+  background-color:#CA1D39;;
+  border: none;
+  color: white;
+  text-align: center;
+    height:50px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.red-info-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.red-info-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.red-info-button:hover span {
+  padding-right: 15px;
+}
+
+.red-info-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+ 
+.blue-info-button {
+    font-family: sans-serif;
+    font-weight:600;
+  border-radius: 4px;
+  background-color: #005FAC;
+  border: none;
+  color: white;
+  text-align: center;
+    height:50px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.blue-info-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.blue-info-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.blue-info-button:hover span {
+  padding-right: 15px;
+}
+
+.blue-info-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+.our-team-left {
+     text-align: justify;
+    width: 500px;
+}
+     
+.our-team-left img {
+    display: block;
+    margin: 0 auto;
+}
+    
 </style>
 <!-- TIPS: 
 1. The carousel shouldn't be in any other div, like for example div with class container. 
 2. You can align image position in classes bg1, bg2, bg3 using css background-position.
 http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 -->
+    <body>
 <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -294,12 +387,12 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=#home>Home</a></li>
-                        <li><a href=#about-me>About</a></li>
+                        <li><a href=#myCarousel>Home</a></li>
+                        <li><a href=#company-info>About</a></li>
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=#>Products<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#products">NurtureWatch</a></li>
-                                <li><a href="#products">LittleGuardian</a></li>
+                                <li><a href="https://www.nurturewatch.com/products/nurturewatch-mobile-enabled-aging-in-place-wearable">NurtureWatch</a></li>
+                                <li><a href="https://www.nurturewatch.com/products/pequeno-guardian?variant=15527968800834">LittleGuardian</a></li>
                             </ul></li>
                         <li><a href=#contact>Contact</a></li>
                     </ul>
@@ -317,18 +410,14 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
       <div class="item bg bg1 active">
         <div class="container">
           <div class="carousel-caption">
-<!--             <h1>Nurture Watch</h1>
-            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p> -->
-<!--             <p><a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a></p> -->
+              <a href="https://www.nurturewatch.com/products/nurturewatch-mobile-enabled-aging-in-place-wearable"><button type="button" class="blue-info-button"><span>More Info</span></button></a>
           </div>
         </div>
       </div>
       <div class="item bg bg2">
         <div class="container">
           <div class="carousel-caption">
-<!--             <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+              <a href="https://www.nurturewatch.com/products/pequeno-guardian?variant=15527968800834"><button type="button" class="red-info-button"><span>More Info</span></button></a>
           </div>
         </div>
       </div>
@@ -344,12 +433,42 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]-->
 
+<section id="company-info" style="margin-top:50px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1 style="text-align:center;color:#9AC553;">ENSURING THE SAFETY OF THOSE WE LOVE</h1>
+                <p style="text-align:center;margin-top:50px;">At MovieWear we are truly a family-focused business. </p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section id="our-team" style="background:#e1e1e1;margin-top:50px;padding-bottom:30px;padding-top:30px;">
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align:center;color:#9AC553;">OUR TEAM</h1>
+            <div class="col-md-6 col-sm-6">
+                <div class="our-team-left">
+                    <img src="ceo.jpg" style="margin-top:50px;width:400px;border-radius:500px;border:1px solid white">
+                    <p style="margin-top:20px;text-align:center;color:black;font-weight:bold;">Jacob Moshinsky</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="our-team-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
 <section id="contact">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <h1>Contact Us</h1>
-                            <form>
+                    <div class="col-md-12 col-md-12">
+                        <h1>CONTACT US</h1>
+                            <form action="mailto:" method="post">
                                 <div class="form-group">
                                     <label>Name: </label>
                                     <input class="form-control" type="text" name="" value="" placeholder="Enter Name" style="width:500px;">
@@ -369,25 +488,21 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
             </div>
         </section>
         
-        <section id="info-bar">
+        <section id="info-bar" style="text-align:center;">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-4 col-sm-4">
                         <h4>INFORMATION</h4>
                         <p>FAQ's</p>
                         <p>About Our Company</p>
                         <p>Contact Us</p>
                     </div>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-4 col-sm-4">
                         <h4>PRODUCTS</h4>
-                        <p><a style="text-decoration:none;color:white;" href="http://www.nurturewatch.com">NurtureWatch</a></p>
-                        <p>LittleGuardian</p>
+                        <p><a style="text-decoration:none;color:white;" href="https://www.nurturewatch.com/products/nurturewatch-mobile-enabled-aging-in-place-wearable">NurtureWatch</a></p>
+                        <p><a style="text-decoration:none;color:white;" href="https://www.nurturewatch.com/products/pequeno-guardian?variant=15527968800834">LittleGuardian</a></p>
                     </div>
-                    <div class="col-md-3 col-sm-3">
-                        <h4>OUR APPS</h4>
-                        <p>...</p>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-4 col-sm-4">
                         <h4>SOCIAL MEDIA</h4>
                         <p><a style="text-decoration:none;color:white;" href="http://www.facebook.com/moviwear">Facebook</a></p>
                         <p><a style="text-decoration:none;color:white;" href="http://www.instagram.com/moviwear">Instagram</a></p>
@@ -398,10 +513,9 @@ http://arturssmirnovs.com/blog/bootstrap-carousel-100-height-and-width/
         </section>
         
         <footer>
-            <p style="color:black; margin-left: 30px; margin-top: 20px; margin-bottom: 20px;">Copyright &copy; 2019 MoviWear</p>
+             <p style="color:black; margin-left: 30px; margin-top: 20px; margin-bottom: 20px;">Copyright &copy; 2019 MoviWear</p>
         </footer>
-        
 
-</body>
+    </body>
 </html>
 
